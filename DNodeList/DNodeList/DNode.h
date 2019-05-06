@@ -17,4 +17,15 @@ typedef struct _DNode{
     struct _DNode * pre;
 }DNode;
 
+
+void createList(DNode * head);
+void insertDNode(DNode * head, int data);
+DNode * searchDNode(DNode * head,int data);
+void remvoeDNode(DNode * head,DNode * pfind);
+void lengthList(DNode * head);
+void popSort(DNode * head);
+void reverseList(DNode * head);
+void tranversing(DNode * head);
+
+
 #endif /* DNode_h */
