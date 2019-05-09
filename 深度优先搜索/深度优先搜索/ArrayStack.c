@@ -16,8 +16,10 @@ void createArrayStack(ArrayStack ** s,int len)
     stack->len = len;
     stack->top = 0;
     
-    stack->space = (int *)malloc(sizeof(int) * len);
+    stack->space = (Point *)malloc(sizeof(Point) * len);
     memset(stack->space, 0x0, sizeof(int) * len);
+    
+    *s = stack;
 }
 
 int  isEmptyArrayStack(ArrayStack * s)
@@ -38,12 +40,12 @@ int isFullArrayStack(ArrayStack * s)
     }
 }
 
-void as_push(ArrayStack * s,int data)
+void as_push(ArrayStack * s,Point p)
 {
-    s->space[s->top++] = data;
+    s->space[s->top++] = p;
 }
 
-int as_pop(ArrayStack * s)
+Point as_pop(ArrayStack * s)
 {
     return s->space[--s->top];
 }
@@ -63,6 +65,6 @@ void tranversing(ArrayStack * s)
 {
     for (int i = 0; i < s->top; i++)
     {
-        printf("%d ",s->space[i]);
+        printf("(x:%d,y:%d) ",s->space[i].x,s->space[i].y);
     }
 }

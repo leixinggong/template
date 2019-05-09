@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4385EDB9228326C2004EA08A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4385EDB8228326C2004EA08A /* main.c */; };
+		4385EDDA22832DB4004EA08A /* ArrayStack.c in Sources */ = {isa = PBXBuildFile; fileRef = 4385EDD922832DB4004EA08A /* ArrayStack.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		4385EDB5228326C2004EA08A /* 深度优先搜索 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "深度优先搜索"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4385EDB8228326C2004EA08A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		4385EDD822832D9A004EA08A /* ArrayStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayStack.h; sourceTree = "<group>"; };
+		4385EDD922832DB4004EA08A /* ArrayStack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ArrayStack.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				4385EDB8228326C2004EA08A /* main.c */,
+				4385EDD822832D9A004EA08A /* ArrayStack.h */,
+				4385EDD922832DB4004EA08A /* ArrayStack.c */,
 			);
 			path = "深度优先搜索";
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4385EDDA22832DB4004EA08A /* ArrayStack.c in Sources */,
 				4385EDB9228326C2004EA08A /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,9 +7,25 @@
 //
 
 #include <stdio.h>
+#include "Queue.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+ 
+    int len = 7;
+    
+    Queue q;
+    initQueue(&q);
+    
+    for (int i = 0; i < len; i++)
+    {
+        enQueue(&q, i+1);
+    }
+    
+    while (!isEmptyQueue(&q))
+    {
+        printf("%d ",deQueue(&q));
+    }
+    putchar(10);
+    
     return 0;
 }

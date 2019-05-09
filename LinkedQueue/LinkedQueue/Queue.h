@@ -20,11 +20,11 @@ typedef struct _Node
 typedef struct _Queue
 {
     Node * front;
-    NOde * rear;
+    Node * rear;
 }Queue;
 
 void initQueue(Queue * q);
-void isEmptyQueue(Queue * q);
+int isEmptyQueue(Queue * q);
 void enQueue(Queue * q,int data);
 int deQueue(Queue * q);
 void resetQueue(Queue * q);

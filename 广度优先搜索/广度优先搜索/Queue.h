@@ -1,6 +1,6 @@
 //
 //  Queue.h
-//  ArrayQueue
+//  LinkedQueue
 //
 //  Created by 龚磊星 on 2019/5/8.
 //  Copyright © 2019 龚磊星. All rights reserved.
@@ -11,19 +11,29 @@
 
 #include <stdio.h>
 
+typedef struct _point
+{
+    int x;
+    int y;
+}Point;
+
+
+typedef struct _Node
+{
+    Point data;
+    struct _Node * next;
+}Node;
+
 typedef struct _Queue
 {
-    int len;
-    int front;
-    int rear;
-    int * space;
+    Node * front;
+    Node * rear;
 }Queue;
 
-void initQueue(Queue * q,int len);
-int isFullQueue(Queue * q);
+void initQueue(Queue * q);
 int isEmptyQueue(Queue * q);
-void enQueue(Queue * q, int data);
-int deQueue(Queue * q);
+void enQueue(Queue * q,Point p);
+Point deQueue(Queue * q);
 void resetQueue(Queue * q);
 void clearQueue(Queue * q);
 

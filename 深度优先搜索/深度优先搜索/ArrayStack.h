@@ -11,9 +11,14 @@
 
 #include <stdio.h>
 
+typedef struct _point{
+    int x;
+    int y;
+}Point;
+
 typedef struct _ArrayStack{
     int len;
-    int * space;
+    Point * space;
     int top;
     
 }ArrayStack;
@@ -21,8 +26,8 @@ typedef struct _ArrayStack{
 void createArrayStack(ArrayStack ** s,int len);
 int  isEmptyArrayStack(ArrayStack * s);
 int isFullArrayStack(ArrayStack * s);
-void as_push(ArrayStack * s,int data);
-int as_pop(ArrayStack * s);
+void as_push(ArrayStack * s,Point p);
+Point as_pop(ArrayStack * s);
 void resetAStack(ArrayStack * s);
 void clearAStack(ArrayStack * s);
 void tranversing(ArrayStack * s);

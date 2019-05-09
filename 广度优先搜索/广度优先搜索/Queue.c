@@ -21,19 +21,19 @@ int isEmptyQueue(Queue * q)
     return q->rear == q->front;
 }
 
-void enQueue(Queue * q,int data)
+void enQueue(Queue * q,Point p)
 {
     Node * cur = (Node *)malloc(sizeof(Node));
-    cur->data = data;
+    cur->data = p;
     cur->next = NULL;
 
     q->rear->next = cur;
     q->rear = cur;
 }
 
-int deQueue(Queue * q)
+Point deQueue(Queue * q)
 {
-    int data = q->front->next->data;
+    Point data = q->front->next->data;
     if (q->front->next == q->rear)
     {
         free(q->front->next);
