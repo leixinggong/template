@@ -29,12 +29,12 @@ int main(int argc, const char * argv[]) {
     insertTreeNode(&tree, 6);
     
     pretraverseBst(tree);
-    midtraverseBst(tree);
-    posttraverseBst(tree);
-    leveltraverseBst(tree);
-    
-    deleteTreeNode(&tree, getBinarySearchTreeNode(tree, 65));
-    midtraverseBst(tree);
+//    midtraverseBst(tree);
+//    posttraverseBst(tree);
+//    leveltraverseBst(tree);
+//    
+//    deleteTreeNode(&tree, getBinarySearchTreeNode(tree, 65));
+//    midtraverseBst(tree);
     
     
     return 0;
